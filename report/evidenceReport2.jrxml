@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="evidenciaInMetrics" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryNewPage="true" uuid="f3ae1af6-6b58-49cb-b281-b5a1f4d07880">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="Dataset1" uuid="48932fb7-2f16-4fd3-b6ec-7677babce0ec">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="SEL_PROJECT" class="java.lang.String"/>
+	<parameter name="SEL_AMBIENTE" class="java.lang.String"/>
+	<parameter name="SEL_NOMETESTE" class="java.lang.String"/>
+	<parameter name="SEL_CICLO" class="java.lang.String"/>
+	<parameter name="SEL_TESTER" class="java.lang.String"/>
+	<parameter name="SEL_MESSAGE" class="java.lang.String"/>
+	<parameter name="SEL_EVIDENCE_IMAGE" class="java.lang.String"/>
+	<parameter name="SEL_EXCEPTION" class="java.lang.String"/>
+	<parameter name="SEL_COMPANY_LOGO" class="java.lang.Object"/>
+	<parameter name="SEL_CUSTOMER_LOGO" class="java.lang.Object"/>
+	<parameter name="SEL_LABEL_EVINDENCE_TITLE" class="java.lang.String"/>
+	<parameter name="SEL_LABEL_NOMETESTE" class="java.lang.String"/>
+	<parameter name="SEL_LABEL_AMBIENTE" class="java.lang.String"/>
+	<parameter name="SEL_LABEL_CICLO" class="java.lang.String"/>
+	<parameter name="SEL_LABEL_PROJECT" class="java.lang.String"/>
+	<parameter name="SEL_LABEL_TESTER" class="java.lang.String"/>
+	<parameter name="SEL_LABEL_DATE" class="java.lang.String"/>
+	<parameter name="SEL_LABEL_STATUS" class="java.lang.String"/>
+	<parameter name="SEL_LABEL_PASS" class="java.lang.String"/>
+	<parameter name="SEL_LABEL_FAILED" class="java.lang.String"/>
+	<parameter name="SEL_LABEL_ERROR_DETAIL" class="java.lang.String"/>
+	<parameter name="SEL_LABEL_FOOTER" class="java.lang.String"/>
+	<parameter name="SEL_LABEL_PAGE" class="java.lang.String"/>
+	<parameter name="SEL_LABEL_EVIDENCE_REPORT" class="java.lang.String"/>
+	<parameter name="SEL_LABEL_COMPANY_NAME" class="java.lang.String"/>
+	<field name="message" class="java.lang.String"/>
+	<field name="image" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="57" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="51" width="554" height="1" uuid="dccf4483-4f2b-4a15-934c-71ecc9c9cd7f"/>
+			</line>
+			<image scaleImage="RetainShape">
+				<reportElement x="1" y="7" width="554" height="50" uuid="f103465c-1035-438c-a557-dff37951f123"/>
+				<imageExpression><![CDATA[$P{SEL_COMPANY_LOGO}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="140" splitType="Stretch">
+			<printWhenExpression><![CDATA[new Boolean($V{PAGE_NUMBER}.intValue() == 1)]]></printWhenExpression>
+			<textField>
+				<reportElement x="64" y="76" width="261" height="20" uuid="29d1fc3f-782d-4c10-b469-861cd1b265b3"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SEL_TESTER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy hh:mm a">
+				<reportElement x="388" y="20" width="132" height="20" uuid="40ce7cb0-07f8-47ff-b488-937d57fa2cd4"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="76" width="63" height="20" uuid="320196cc-5bb2-422d-9952-ab0e1f7414ec"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SEL_LABEL_TESTER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="20" width="63" height="20" uuid="9fb7a828-2f8c-4f95-a57b-aad6e501202d"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SEL_LABEL_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="96" width="63" height="20" uuid="dd93f785-a8d4-4990-95d6-b5bcdcf542a5"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SEL_LABEL_STATUS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="64" y="96" width="456" height="20" forecolor="#00FF00" uuid="58759871-0a77-4338-8b91-c210c3a663f9">
+					<printWhenExpression><![CDATA[$P{SEL_EXCEPTION}.length() == 0]]></printWhenExpression>
+				</reportElement>
+				<box leftPadding="9">
+					<pen lineWidth="0.75" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SEL_LABEL_PASS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="64" y="96" width="456" height="20" forecolor="#FF0000" uuid="6d033018-cb63-4787-a5e3-2bbab6ebc4a7">
+					<printWhenExpression><![CDATA[$P{SEL_EXCEPTION}.length() > 0]]></printWhenExpression>
+				</reportElement>
+				<box leftPadding="9">
+					<pen lineWidth="0.75" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SEL_LABEL_FAILED}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="1" y="0" width="519" height="20" backcolor="#1A75CE" uuid="5bcdcc49-c172-4a17-b790-5a1dc5b4834c"/>
+				<box leftPadding="150">
+					<pen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SEL_PROJECT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="20" width="63" height="20" uuid="208b80fa-7956-4b28-bd45-7a23ca030532"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SEL_LABEL_AMBIENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="64" y="20" width="261" height="20" uuid="236a1733-23fc-4726-a1b8-16ea3606bba8"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SEL_AMBIENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="40" width="63" height="36" uuid="6da107bb-7108-4160-8aad-8df9d6bfb8e7"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SEL_LABEL_NOMETESTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="64" y="40" width="456" height="36" uuid="dee044f1-d147-4c94-91d7-1d37a282de25"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SEL_NOMETESTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="76" width="63" height="20" uuid="ae83abd4-a397-4d67-8b07-bb80a0335c1c"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SEL_LABEL_CICLO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="388" y="76" width="132" height="20" uuid="f78de9ff-e869-4957-b634-91cff3f90f89"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SEL_CICLO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="500" splitType="Prevent">
+			<image scaleImage="RetainShape">
+				<reportElement x="0" y="30" width="554" height="465" uuid="d3d8155c-2ec1-4164-8499-5f7992caf6da"/>
+				<imageExpression><![CDATA[$F{image}]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="554" height="22" uuid="d24fba93-795b-47f3-820f-b14b6636d315"/>
+				<textFieldExpression><![CDATA[$F{message}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50">
+			<line>
+				<reportElement x="1" y="10" width="554" height="1" uuid="183e9a6d-d558-4ffe-828e-590b26ad02bf"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="45" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{SEL_EXCEPTION}.length() > 0]]></printWhenExpression>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="1" y="20" width="554" height="18" forecolor="#FF0000" uuid="f0712fbe-c3f2-480f-ab72-1147c1451e5a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SEL_EXCEPTION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="0" width="553" height="20" uuid="b5b20e8b-e28c-4f37-8596-fc1a820362b3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SEL_LABEL_ERROR_DETAIL}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
