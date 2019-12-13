@@ -1,2 +1,2 @@
-# wmbr_snf_tester
+﻿# SiteSenhorBarrigaWeb
 Repositório de testes automatizados
