@@ -5,7 +5,7 @@
 @LoginSenhorBarriga
 Funcionalidade: Login SR Barriga
 
-  @Teste01 @webSenhorBarriga
+  @Teste01 @webSenhorBarriga @TesteValidos
   Cenario: 01 - Validar acesso a tela de Login do Site do Senhor Barriga
     Dado que estou no site do Senhor Barriga
     E estou executando o teste
@@ -15,7 +15,7 @@ Funcionalidade: Login SR Barriga
     Quando clico no botao Entrar
     Entao deve ser apresentado a mensagem "Bem vindo, bina!"
 
-  @Teste02 @webSenhorBarriga
+  @Teste02 @webSenhorBarriga @TesteValidos
   Cenario: 02 - Validar Obrigatoriedade do Campo Email
     Dado que estou no site do Senhor Barriga
     E estou executando o teste
@@ -42,4 +42,4 @@ Funcionalidade: Login SR Barriga
       | id | Numero do CT | Nome do CT                                               | Nome do executor | Sprint |
       |  4 | Teste - 04   | Valdiar Click no botão Entrar sem preencher nenhum campo | Hilario Bina     | T1     |
     Quando clico no botao Entrar
-    Entao deve ser apresentado as mensagens "Email é um campo obrigatório" e "Senha é um campo obrigatório"
+    Entao deve ser apresentado as mensagens "Email é um campo obrigatório" e "Senha é um campo"
