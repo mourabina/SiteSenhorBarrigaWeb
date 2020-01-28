@@ -47,7 +47,7 @@ public class Evidence {
 	public void generateEvidence(Scenario scenario) throws IOException {
 		EvidenceReport report = new EvidenceReport(evidenceList, "CT-" + ctNumber + "_" + dateFormatter.date(),
 				tester, project, errors, environment, ctName, cycle);
-		GenerateEvidenceReport.generareEvidenceReport(report, EvidenceType.DOC, scenario);
+		GenerateEvidenceReport.generareEvidenceReport(report, EvidenceType.PDF, scenario);
 	}
 
 	/**
