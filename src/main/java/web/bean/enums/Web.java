@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import web.bean.interfaces.WebApplication;
 
 public enum Web implements WebApplication{
@@ -16,9 +17,8 @@ public enum Web implements WebApplication{
 
 		@Override
 		public WebDriver getDriver() {
-//			ChromeOptions op = new ChromeOptions();
-//			op.setHeadless(true);
-			System.setProperty("webdriver.chrome.driver","chromedriver");
+			WebDriverManager.chromedriver().setup();
+//			System.setProperty("webdriver.chrome.driver","chromedriver");
 			Map<String, Object> prefs = new HashMap<String, Object>();
 			prefs.put("profile.default_content_setting_values.notifications", 2);
 			ChromeOptions options = new ChromeOptions();
