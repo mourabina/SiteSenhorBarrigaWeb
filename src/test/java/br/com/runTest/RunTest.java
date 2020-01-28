@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 		"json:target/cucumber.json" }, features = {
 				".//src//test//resources//" }, glue = { "web.steps", "configuration", "commons" },
 
-		tags = { "@" })
+		tags = { "@Teste01" })
 
 public class RunTest extends BaseTest {
 	@AfterClass
