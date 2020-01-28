@@ -291,6 +291,7 @@ public class GenerateEvidenceReport {
 				ExcelReport.relatorio.add(scenario.getStatus());
 				String reportNameDoc = Normalizer.normalize(scenario.getName(), Normalizer.Form.NFD);
 				reportNameDoc = reportNameDoc.replaceAll("[^\\p{ASCII}]", "");
+				System.out.println("PASTA DE EVIDENCIAS" + evidenceDir);
 				File archivo = new File(evidenceDir + reportNameDoc+ " " + horaSistema.format(date).toString() +".doc");
 				FileOutputStream os = new FileOutputStream(archivo);
 
