@@ -24,7 +24,7 @@ public class CadastraUsuarioFuncionaldiade extends BaseTest {
 	public void preencherCampoCriarUsuario(String campo, String valor) {
 		WebElement elem = webDriver.findElement(By.xpath("//label[@for='" + campo + "']//parent::div/input"));
 		elem.sendKeys(valor);
-		addEvidenciaWeb("preenchendo o campo " + campo);
+		//addEvidenciaWeb("preenchendo o campo " + campo);
 	}
 
 	public void clicarBotaoCadastrar() {
@@ -50,7 +50,7 @@ public class CadastraUsuarioFuncionaldiade extends BaseTest {
 			lista1.add(lista.get(i).getText());
 		}
 		
-		addEvidenciaWeb("Validando Mensagem Exibida");
+		//addEvidenciaWeb("Validando Mensagem Exibida");
 		return lista1.equals(msg);
 	}
 

@@ -26,7 +26,7 @@ public class LoginFuncionalidade extends BaseTest {
 	public void digitarUsuarioSenha(String usuario, String senha) {
 		login.getInputEmail().sendKeys(usuario);
 		login.getInputSenha().sendKeys(senha);
-		addEvidenciaWeb("Digitado Usuario e Senha");
+		//addEvidenciaWeb("Digitado Usuario e Senha");
 	}
 	
 	public void clicarBtEntrar() {
@@ -55,7 +55,7 @@ public class LoginFuncionalidade extends BaseTest {
 		for(int i = 0 ; i < lista.size(); i++) {
 			lista1.add(lista.get(i).getText());
 		}
-		addEvidenciaWeb("Validando Mensagens");
+		//addEvidenciaWeb("Validando Mensagens");
 		return lista1.equals(msg);
 	}
 	
